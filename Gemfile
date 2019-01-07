@@ -6,8 +6,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-File.read('./.ruby-version')
-
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'coffee-rails', '~> 4.2'
 gem 'figaro', '~> 1.1', '>= 1.1.1'

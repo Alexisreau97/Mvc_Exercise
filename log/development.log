@@ -1,0 +1,44 @@
+  [1m[35m (576.7ms)[0m  [1m[35mCREATE DATABASE "mvc_exercise_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (572.7ms)[0m  [1m[35mCREATE DATABASE "mvc_exercise_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5520102858362305815)[0m
+  ↳ bin/rails:4
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateItems (20190105150742)
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "items" ("id" bigserial primary key, "original_price" float NOT NULL, "has_discount" boolean DEFAULT FALSE, "discount_percentage" integer DEFAULT 0, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190105150742_create_items.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190105150742"]]
+  ↳ bin/rails:4
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-07 12:49:37.884299"], ["updated_at", "2019-01-07 12:49:37.884299"]]
+  ↳ bin/rails:4
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5520102858362305815)[0m
+  ↳ bin/rails:4
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/" for 127.0.0.1 at 2019-01-07 13:50:23 +0100
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  Rendered administration/items/index.html.erb within layouts/administration (11.6ms)
+  Rendered layouts/administration/_sidebar.html.erb (14.4ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.8ms)
+Completed 200 OK in 18083ms (Views: 18033.6ms | ActiveRecord: 0.0ms)
+
+
