@@ -14,6 +14,10 @@
 
 class Item < ApplicationRecord
   def price
-    80.00
+    
+  end
+
+  def average_price
+  	
   end
 end
