@@ -16,13 +16,15 @@
 									<th>Prix</th>
 								</tr>
 							</thead>
+							<% @items.each do |item| %>
 							<tbody>
 								<tr>
-									<th><%=  %></th>
-									<th><%=  %></th>
-									<th><%=  %></th>
+									<th><%= item.original_price %></th>
+									<th><%= item.discount_percentage %></th>
+									<th><%= item.price %></th>
 								</tr>
 							</tbody>
+							<% end %>
 						</table>
 					</div>
 				</div>

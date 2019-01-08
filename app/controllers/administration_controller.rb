@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 class AdministrationController < ApplicationController
-  layout "administration"
+  layout 'administration'
 end

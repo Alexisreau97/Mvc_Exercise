@@ -624,3 +624,210 @@ Completed 200 OK in 1693ms (Views: 1585.4ms | ActiveRecord: 0.0ms)
   [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
   [1m[36mItem Load (1.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
   [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+Started GET "/" for 127.0.0.1 at 2019-01-08 14:04:31 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  Rendered administration/items/index.html.erb within layouts/administration (1.4ms)
+  Rendered layouts/administration/_sidebar.html.erb (3.8ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.8ms)
+Completed 200 OK in 252ms (Views: 218.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-08 14:05:44 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  Rendered administration/items/index.html.erb within layouts/administration (684.7ms)
+Completed 500 Internal Server Error in 714ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `item' for #<#<Class:0x00007fee0ef506f0>:0x00007fee0e9e3730>):
+    18: 							</thead>
+    19: 							<tbody>
+    20: 								<tr>
+    21: 									<th><%= item.original_price %></th>
+    22: 									<th><%=  %></th>
+    23: 									<th><%=  %></th>
+    24: 								</tr>
+  
+app/views/administration/items/index.html.erb:21:in `_app_views_administration_items_index_html_erb___556829631263554080_70330212110980'
+Started GET "/" for 127.0.0.1 at 2019-01-08 14:06:15 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  Rendered administration/items/index.html.erb within layouts/administration (395.6ms)
+Completed 500 Internal Server Error in 413ms (ActiveRecord: 8.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `original_price' for #<Class:0x00007fee0fbfc700>):
+    18: 							</thead>
+    19: 							<tbody>
+    20: 								<tr>
+    21: 									<th><%= Item.original_price %></th>
+    22: 									<th><%=  %></th>
+    23: 									<th><%=  %></th>
+    24: 								</tr>
+  
+app/views/administration/items/index.html.erb:21:in `_app_views_administration_items_index_html_erb___556829631263554080_70330221738460'
+Started GET "/" for 127.0.0.1 at 2019-01-08 14:06:22 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  Rendered administration/items/index.html.erb within layouts/administration (372.5ms)
+Completed 500 Internal Server Error in 382ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `original_price' for #<#<Class:0x00007fee0ef506f0>:0x00007fee0bc0d680>):
+    18: 							</thead>
+    19: 							<tbody>
+    20: 								<tr>
+    21: 									<th><%= original_price %></th>
+    22: 									<th><%=  %></th>
+    23: 									<th><%=  %></th>
+    24: 								</tr>
+  
+app/views/administration/items/index.html.erb:21:in `_app_views_administration_items_index_html_erb___556829631263554080_70330188121280'
+Started GET "/" for 127.0.0.1 at 2019-01-08 14:09:05 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  Rendered administration/items/index.html.erb within layouts/administration (346.9ms)
+Completed 500 Internal Server Error in 383ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `item' for #<#<Class:0x00007fee0ef506f0>:0x00007fee10804228>):
+    17: 								</tr>
+    18: 							</thead>
+    19: 							<tbody>
+    20: 								<% item.each do %>
+    21: 								<tr>
+    22: 									<th><%= item.original_price %></th>
+    23: 									<th><%=  %></th>
+  
+app/views/administration/items/index.html.erb:20:in `_app_views_administration_items_index_html_erb___556829631263554080_70330227893880'
+Started GET "/" for 127.0.0.1 at 2019-01-08 14:09:47 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  Rendered administration/items/index.html.erb within layouts/administration (332.0ms)
+Completed 500 Internal Server Error in 342ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `items' for #<#<Class:0x00007fee0ef506f0>:0x00007fee10862a08>):
+    17: 								</tr>
+    18: 							</thead>
+    19: 							<tbody>
+    20: 								<% items.each do |items| %>
+    21: 								<tr>
+    22: 									<th><%= item.original_price %></th>
+    23: 									<th><%=  %></th>
+  
+app/views/administration/items/index.html.erb:20:in `_app_views_administration_items_index_html_erb___556829631263554080_70330228087180'
+Started GET "/" for 127.0.0.1 at 2019-01-08 14:10:57 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  Rendered administration/items/index.html.erb within layouts/administration (399.9ms)
+Completed 500 Internal Server Error in 437ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `items' for #<#<Class:0x00007fee0ef506f0>:0x00007fee0a563560>):
+    16: 									<th>Prix</th>
+    17: 								</tr>
+    18: 							</thead>
+    19: 							<% items.each do |items| %>
+    20: 							<tbody>
+    21: 								<tr>
+    22: 									<th><%= item.original_price %></th>
+  
+app/views/administration/items/index.html.erb:19:in `_app_views_administration_items_index_html_erb___556829631263554080_70330176197980'
+Started GET "/" for 127.0.0.1 at 2019-01-08 14:11:44 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/reaualexis/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/reaualexis/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/reaualexis/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/reaualexis/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/reaualexis/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/reaualexis/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/reaualexis/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/reaualexis/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  Rendered administration/items/index.html.erb within layouts/administration (433.7ms)
+Completed 500 Internal Server Error in 486ms (ActiveRecord: 12.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `items' for #<#<Class:0x00007fee10873600>:0x00007fee10871c38>
+Did you mean?  @items):
+    16: 									<th>Prix</th>
+    17: 								</tr>
+    18: 							</thead>
+    19: 							<% items.each do |items| %>
+    20: 							<tbody>
+    21: 								<tr>
+    22: 									<th><%= item.original_price %></th>
+  
+app/views/administration/items/index.html.erb:19:in `_app_views_administration_items_index_html_erb___556829631263554080_70330228121360'
+Started GET "/" for 127.0.0.1 at 2019-01-08 14:12:00 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:19
+  Rendered administration/items/index.html.erb within layouts/administration (5.6ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.5ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.8ms)
+Completed 200 OK in 563ms (Views: 557.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-08 14:12:49 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:19
+  Rendered administration/items/index.html.erb within layouts/administration (12.0ms)
+  Rendered layouts/administration/_sidebar.html.erb (14.3ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.6ms)
+Completed 200 OK in 140ms (Views: 128.3ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-08 14:13:07 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:19
+  Rendered administration/items/index.html.erb within layouts/administration (13.3ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.0ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.7ms)
+Completed 200 OK in 62ms (Views: 49.8ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-08 14:14:43 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:19
+  Rendered administration/items/index.html.erb within layouts/administration (9.9ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.3ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.6ms)
+Completed 200 OK in 60ms (Views: 54.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-08 14:14:50 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:19
+  Rendered administration/items/index.html.erb within layouts/administration (11.9ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.0ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.7ms)
+Completed 200 OK in 71ms (Views: 58.7ms | ActiveRecord: 8.2ms)
+
+
