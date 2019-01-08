@@ -579,3 +579,48 @@ Completed 200 OK in 1693ms (Views: 1585.4ms | ActiveRecord: 0.0ms)
   [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
   [1m[36mItem Create (1.9ms)[0m  [1m[32mINSERT INTO "items" ("original_price", "has_discount", "discount_percentage", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_price", 15.0], ["has_discount", true], ["discount_percentage", 20], ["created_at", "2019-01-08 09:42:11.279062"], ["updated_at", "2019-01-08 09:42:11.279062"]]
   [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (2.3ms)[0m  [1m[32mINSERT INTO "items" ("original_price", "has_discount", "discount_percentage", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_price", 15.0], ["has_discount", true], ["discount_percentage", 20], ["created_at", "2019-01-08 09:53:00.520897"], ["updated_at", "2019-01-08 09:53:00.520897"]]
+  [1m[35m (23.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (1.9ms)[0m  [1m[32mINSERT INTO "items" ("original_price", "has_discount", "discount_percentage", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_price", 50.0], ["has_discount", true], ["discount_percentage", 20], ["created_at", "2019-01-08 09:53:09.586986"], ["updated_at", "2019-01-08 09:53:09.586986"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mItem Load (8.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mItem Load (2.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mItem Load (3.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mItem Destroy (12.2ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 1]]
+  [1m[36mItem Destroy (5.1ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 2]]
+  [1m[36mItem Destroy (5.9ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 3]]
+  [1m[36mItem Destroy (3.7ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 4]]
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mItem Destroy (4.0ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 5]]
+  [1m[36mItem Destroy (3.1ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 6]]
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mItem Load (2.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (2.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Destroy (1.7ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 7]]
+  [1m[35m (25.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mItem Load (2.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mItem Load (2.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (2.7ms)[0m  [1m[32mINSERT INTO "items" ("original_price", "has_discount", "discount_percentage", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_price", 15.0], ["has_discount", true], ["discount_percentage", 20], ["created_at", "2019-01-08 10:11:31.214422"], ["updated_at", "2019-01-08 10:11:31.214422"]]
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (2.1ms)[0m  [1m[32mINSERT INTO "items" ("original_price", "has_discount", "discount_percentage", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_price", 15.0], ["has_discount", true], ["discount_percentage", 20], ["created_at", "2019-01-08 10:35:28.919353"], ["updated_at", "2019-01-08 10:35:28.919353"]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Create (1.6ms)[0m  [1m[32mINSERT INTO "items" ("original_price", "has_discount", "discount_percentage", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_price", 50.0], ["has_discount", true], ["discount_percentage", 20], ["created_at", "2019-01-08 10:35:36.919993"], ["updated_at", "2019-01-08 10:35:36.919993"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (85.9ms)[0m  [1m[34mSELECT SUM() FROM "items"[0m
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mItem Load (3.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (66.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mItem Load (2.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mItem Load (1.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m

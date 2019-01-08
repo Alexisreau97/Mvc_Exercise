@@ -21,7 +21,11 @@ class Item < ApplicationRecord
   	end
   end
 
-  def average_price
-  	
+  def self.average_price
+  	sum = 0
+  	Item.all.each do |i|
+  		sum += i.price
+  	end
+  	sum / Item.count
   end
 end
