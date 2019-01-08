@@ -35,4 +35,12 @@ RSpec.describe Item, type: :model do
       it { expect(item.price).to eq(80.00) }
     end
   end
+
+  describe 'Price_without_discount' do
+    context 'when the item has not a discount' do
+      let(:item) { build(:item_without_discount, original_price: 100.00, discount_percentage: nil) }
+
+      it { expect(item.price).to eq(100.00) }
+    end
+  end
 end
