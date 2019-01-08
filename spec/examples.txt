@@ -1,9 +1,12 @@
 example_id                                                          | status | run_time        |
 ------------------------------------------------------------------- | ------ | --------------- |
-./spec/controllers/administration/items_controller_spec.rb[1:1:1]   | passed | 0.17091 seconds |
-./spec/controllers/administration/items_controller_spec.rb[1:2:1:1] | passed | 0.00541 seconds |
-./spec/controllers/home_controller_spec.rb[1:1:1]                   | passed | 0.12226 seconds |
-./spec/models/item_spec.rb[1:1:1:1]                                 | passed | 0.00521 seconds |
-./spec/models/item_spec.rb[1:1:1:2]                                 | passed | 0.00607 seconds |
-./spec/models/item_spec.rb[1:1:1:3]                                 | passed | 0.006 seconds   |
-./spec/models/item_spec.rb[1:2:1:1]                                 | passed | 0.04588 seconds |
+./spec/controllers/administration/items_controller_spec.rb[1:1:1]   | passed | 0.04217 seconds |
+./spec/controllers/administration/items_controller_spec.rb[1:2:1:1] | passed | 0.00539 seconds |
+./spec/controllers/home_controller_spec.rb[1:1:1]                   | passed | 0.08569 seconds |
+./spec/models/item_spec.rb[1:1:1:1]                                 | passed | 0.00379 seconds |
+./spec/models/item_spec.rb[1:1:1:2]                                 | passed | 0.0037 seconds  |
+./spec/models/item_spec.rb[1:1:1:3]                                 | passed | 0.00477 seconds |
+./spec/models/item_spec.rb[1:1:1:4]                                 | passed | 0.00467 seconds |
+./spec/models/item_spec.rb[1:1:1:5]                                 | passed | 0.00436 seconds |
+./spec/models/item_spec.rb[1:1:1:6]                                 | passed | 0.00429 seconds |
+./spec/models/item_spec.rb[1:2:1:1]                                 | passed | 0.05365 seconds |
