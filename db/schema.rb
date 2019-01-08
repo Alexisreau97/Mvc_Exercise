@@ -10,15 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_190_105_150_742) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension 'plpgsql'
+ActiveRecord::Schema.define(version: 2019_01_05_150742) do
 
-  create_table 'items', force: :cascade do |t|
-    t.float 'original_price', null: false
-    t.boolean 'has_discount', default: false
-    t.integer 'discount_percentage', default: 0
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "items", force: :cascade do |t|
+    t.float "original_price", null: false
+    t.boolean "has_discount", default: false
+    t.integer "discount_percentage", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
+
 end

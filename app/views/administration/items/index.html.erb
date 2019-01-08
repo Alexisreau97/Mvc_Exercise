@@ -14,16 +14,20 @@
 									<th>Prix de départ</th>
 									<th>Pourcentage de remise</th>
 									<th>Prix</th>
+									<th></th>
 								</tr>
 							</thead>
 							<% @items.each do |item| %>
-							<tbody>
-								<tr>
-									<th><%= item.original_price %></th>
-									<th><%= item.discount_percentage %></th>
-									<th><%= item.price %></th>
-								</tr>
-							</tbody>
+								<%= form_for item, :url => administration_item_path(item.id), html: {method: :put} do |f| %>
+								<tbody>
+									<tr>
+										<th><%= item.original_price %></th>
+										<th><%= f.number_field :discount_percentage %></th>
+										<th><%= item.price %></th>
+										<th><%= f.submit "Modifier" %></th>
+									</tr>
+								</tbody>
+								<% end %>
 							<% end %>
 						</table>
 					</div>
