@@ -14,7 +14,11 @@
 
 class Item < ApplicationRecord
   def price
-    
+  	if has_discount
+  		original_price - (original_price * discount_percentage / 100)
+  	else
+  		original_price
+  	end
   end
 
   def average_price
