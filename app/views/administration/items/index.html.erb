@@ -11,9 +11,10 @@
 						<table class="table table-striped table-hover">
 							<thead>
 								<tr>
+									<th>Variété</th>
 									<th>Prix de départ</th>
 									<th>Pourcentage de remise</th>
-									<th>Prix</th>
+									<th>Prix après remise</th>
 									<th></th>
 								</tr>
 							</thead>
@@ -21,9 +22,10 @@
 								<%= form_for item, :url => administration_item_path(item.id), html: {method: :put} do |f| %>
 								<tbody>
 									<tr>
-										<th><%= item.original_price %></th>
+										<th><%= item.name %></th>
+										<th><%= item.original_price %>€ / kg</th>
 										<th><%= f.number_field :discount_percentage, class: "form-control" %></th>
-										<th><%= item.price %></th>
+										<th><%= item.price %>€ / kg</th>
 										<th><%= f.submit "Modifier", class: "btn btn-primary" %></th>
 									</tr>
 								</tbody>
