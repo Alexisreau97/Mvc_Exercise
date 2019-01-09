@@ -4414,3 +4414,536 @@ Processing by Administration::ItemsController#index as HTML
 Completed 200 OK in 90ms (Views: 84.8ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/administration/items" for 127.0.0.1 at 2019-01-09 14:53:02 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:21
+  Rendered administration/items/index.html.erb within layouts/administration (8.9ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.4ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.6ms)
+Completed 200 OK in 79ms (Views: 72.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/administration/items" for 127.0.0.1 at 2019-01-09 15:11:18 +0100
+  
+SyntaxError (/Users/reaualexis/thp-next/exo_1/app/controllers/administration/items_controller.rb:12: syntax error, unexpected ':', expecting ']'
+      if params[:items :discount_percentage] < 100
+                       ^
+/Users/reaualexis/thp-next/exo_1/app/controllers/administration/items_controller.rb:26: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/administration/items_controller.rb:12: syntax error, unexpected ':', expecting ']'
+app/controllers/administration/items_controller.rb:26: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2019-01-09 15:11:46 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (3.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:21
+  Rendered administration/items/index.html.erb within layouts/administration (37.3ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.5ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.6ms)
+Completed 200 OK in 945ms (Views: 848.3ms | ActiveRecord: 18.0ms)
+
+
+Started PUT "/administration/items/2" for 127.0.0.1 at 2019-01-09 15:11:52 +0100
+Processing by Administration::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sOORDUBF02PdSivijG9E2kJZZUCZY9Aoj6BsWixHmah0mQtNiRIQtUUHy3bhvABGTSlhgTe2PvIKjRM45Q45nA==", "item"=>{"discount_percentage"=>"10"}, "commit"=>"Modifier", "id"=>"2"}
+  [1m[36mItem Load (4.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/administration/items_controller.rb:10
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[36mItem Update (2.6ms)[0m  [1m[33mUPDATE "items" SET "discount_percentage" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["discount_percentage", 10], ["updated_at", "2019-01-09 14:11:52.864203"], ["id", 2]]
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 28.3ms)
+
+
+  
+ArgumentError (comparison of String with 100 failed):
+  
+app/controllers/administration/items_controller.rb:12:in `<'
+app/controllers/administration/items_controller.rb:12:in `update'
+Started GET "/" for 127.0.0.1 at 2019-01-09 15:13:55 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (4.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:21
+  Rendered administration/items/index.html.erb within layouts/administration (14.9ms)
+  Rendered layouts/administration/_sidebar.html.erb (3.2ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.7ms)
+Completed 200 OK in 916ms (Views: 874.7ms | ActiveRecord: 4.3ms)
+
+
+Started PUT "/administration/items/3" for 127.0.0.1 at 2019-01-09 15:14:03 +0100
+Processing by Administration::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0bJR8lBYl/NE217kNXryJAbOUFLIFnCdm9oIbFWxKEvQlSdgG/xf5EfzRiwmms9DWcMFJKx9Uf+eiIeqcCKMJQ==", "item"=>{"discount_percentage"=>"20"}, "commit"=>"Modifier", "id"=>"3"}
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/administration/items_controller.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[36mItem Update (1.6ms)[0m  [1m[33mUPDATE "items" SET "discount_percentage" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["discount_percentage", 20], ["updated_at", "2019-01-09 14:14:03.762132"], ["id", 3]]
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[35m (35.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+Completed 500 Internal Server Error in 274ms (ActiveRecord: 56.4ms)
+
+
+  
+NoMethodError (undefined method `item' for #<Administration::ItemsController:0x00007f97c2170848>):
+  
+app/controllers/administration/items_controller.rb:12:in `update'
+Started GET "/" for 127.0.0.1 at 2019-01-09 15:15:49 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:21
+  Rendered administration/items/index.html.erb within layouts/administration (62.2ms)
+  Rendered layouts/administration/_sidebar.html.erb (7.1ms)
+  Rendered layouts/shared/_flash_messages.html.erb (1.0ms)
+Completed 200 OK in 1245ms (Views: 1147.1ms | ActiveRecord: 13.9ms)
+
+
+Started PUT "/administration/items/4" for 127.0.0.1 at 2019-01-09 15:15:57 +0100
+Processing by Administration::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9bGcBSC0Z7FlZqHz88uQNQgOgRdIWZBGGpMrTcZXwp8uDaV55/PbCGlL5psWEqb/10W7zgIPljYRbw4OL2yMQA==", "item"=>{"discount_percentage"=>"20"}, "commit"=>"Modifier", "id"=>"4"}
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/administration/items_controller.rb:10
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[36mItem Update (1.9ms)[0m  [1m[33mUPDATE "items" SET "discount_percentage" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["discount_percentage", 20], ["updated_at", "2019-01-09 14:15:57.186453"], ["id", 4]]
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[35m (11.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 26.3ms)
+
+
+  
+NoMethodError (undefined method `<' for nil:NilClass):
+  
+app/controllers/administration/items_controller.rb:12:in `update'
+Started GET "/" for 127.0.0.1 at 2019-01-09 15:16:48 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:21
+  Rendered administration/items/index.html.erb within layouts/administration (22.9ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.2ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.6ms)
+Completed 200 OK in 722ms (Views: 619.4ms | ActiveRecord: 2.5ms)
+
+
+Started PUT "/administration/items/5" for 127.0.0.1 at 2019-01-09 15:16:53 +0100
+Processing by Administration::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ezkvRglxLJ5uuigPTlTpumrZJTwV348R1xix0SrxDLI1yh2nb8bR5WWsDvf1qZNuZ1eQqWc6ovfyCyrH81J03w==", "item"=>{"discount_percentage"=>"20"}, "commit"=>"Modifier", "id"=>"5"}
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/administration/items_controller.rb:10
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[36mItem Update (2.3ms)[0m  [1m[33mUPDATE "items" SET "discount_percentage" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["discount_percentage", 20], ["updated_at", "2019-01-09 14:16:53.162716"], ["id", 5]]
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[35m (19.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 28.4ms)
+
+
+  
+ArgumentError (comparison of String with 100 failed):
+  
+app/controllers/administration/items_controller.rb:12:in `<'
+app/controllers/administration/items_controller.rb:12:in `update'
+Started GET "/" for 127.0.0.1 at 2019-01-09 15:20:21 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:21
+  Rendered administration/items/index.html.erb within layouts/administration (43.6ms)
+  Rendered layouts/administration/_sidebar.html.erb (14.4ms)
+  Rendered layouts/shared/_flash_messages.html.erb (1.2ms)
+Completed 200 OK in 908ms (Views: 777.3ms | ActiveRecord: 2.1ms)
+
+
+Started PUT "/administration/items/6" for 127.0.0.1 at 2019-01-09 15:20:27 +0100
+Processing by Administration::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m+PguuxT2CbLK2CjGqi2VqMOuW0FdxdaUPN0xFyZzm3fXmAz8fWnvTPWJNX2je0f7pGq31KTQDGUxyweLmCAcQ==", "item"=>{"discount_percentage"=>"20"}, "commit"=>"Modifier", "id"=>"6"}
+  [1m[36mItem Load (3.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/administration/items_controller.rb:10
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[36mItem Update (2.9ms)[0m  [1m[33mUPDATE "items" SET "discount_percentage" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["discount_percentage", 20], ["updated_at", "2019-01-09 14:20:27.282546"], ["id", 6]]
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 15.6ms)
+
+
+  
+NoMethodError (undefined method `<' for nil:NilClass):
+  
+app/controllers/administration/items_controller.rb:12:in `update'
+Started GET "/" for 127.0.0.1 at 2019-01-09 15:21:47 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:21
+  Rendered administration/items/index.html.erb within layouts/administration (23.0ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.5ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.6ms)
+Completed 200 OK in 913ms (Views: 798.0ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/administration/items/7" for 127.0.0.1 at 2019-01-09 15:21:51 +0100
+Processing by Administration::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tVGKkzPfqiE4exWJ9Fzw5hyyaxA2lq84Vx3d/d7ED/GhfJ4fR7ONQTCZFhmUG41xph8Qnlm0ECt5yGiRq+o6Ng==", "item"=>{"discount_percentage"=>"20"}, "commit"=>"Modifier", "id"=>"7"}
+  [1m[36mItem Load (2.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/administration/items_controller.rb:10
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[36mItem Update (3.2ms)[0m  [1m[33mUPDATE "items" SET "discount_percentage" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["discount_percentage", 20], ["updated_at", "2019-01-09 14:21:51.666402"], ["id", 7]]
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[35m (56.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 68.5ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/administration/items_controller.rb:12:in `update'
+Started GET "/" for 127.0.0.1 at 2019-01-09 15:23:05 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:21
+  Rendered administration/items/index.html.erb within layouts/administration (36.8ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.3ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.6ms)
+Completed 200 OK in 852ms (Views: 741.8ms | ActiveRecord: 2.6ms)
+
+
+Started PUT "/administration/items/8" for 127.0.0.1 at 2019-01-09 15:23:11 +0100
+Processing by Administration::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kv+iIzusmEb2pKcc7FyiaMjS/TFRVJjRiTVBipHFR0ae/dNy3buysi1SEgctN2ZjXu20RL7flMPAZP6ClYVhTg==", "item"=>{"discount_percentage"=>"30"}, "commit"=>"Modifier", "id"=>"8"}
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/administration/items_controller.rb:10
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[36mItem Update (1.9ms)[0m  [1m[33mUPDATE "items" SET "discount_percentage" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["discount_percentage", 30], ["updated_at", "2019-01-09 14:23:11.425292"], ["id", 8]]
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[35m (34.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 46.9ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/administration/items_controller.rb:12:in `update'
+Started GET "/" for 127.0.0.1 at 2019-01-09 15:23:44 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:21
+  Rendered administration/items/index.html.erb within layouts/administration (26.0ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.1ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.8ms)
+Completed 200 OK in 769ms (Views: 642.4ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/administration/items/9" for 127.0.0.1 at 2019-01-09 15:23:49 +0100
+Processing by Administration::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8AvT8N5J/6UPD8b8NXVu9SQ2lP5BIHsghBYhVJ2fBsaZq7tLZ6kZ7yrtCzuGzJ5dnvyeD7qTZpiijF7R5oj2hQ==", "item"=>{"discount_percentage"=>"30"}, "commit"=>"Modifier", "id"=>"9"}
+  [1m[36mItem Load (2.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/administration/items_controller.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[36mItem Update (2.4ms)[0m  [1m[33mUPDATE "items" SET "discount_percentage" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["discount_percentage", 30], ["updated_at", "2019-01-09 14:23:49.031001"], ["id", 9]]
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[35m (10.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+Completed 500 Internal Server Error in 178ms (ActiveRecord: 20.8ms)
+
+
+  
+NoMethodError (undefined method `item' for #<Administration::ItemsController:0x00007f97bd30a410>):
+  
+app/controllers/administration/items_controller.rb:12:in `update'
+Started GET "/" for 127.0.0.1 at 2019-01-09 15:25:39 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:21
+  Rendered administration/items/index.html.erb within layouts/administration (35.6ms)
+  Rendered layouts/administration/_sidebar.html.erb (3.5ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.9ms)
+Completed 200 OK in 842ms (Views: 721.6ms | ActiveRecord: 2.4ms)
+
+
+Started PUT "/administration/items/10" for 127.0.0.1 at 2019-01-09 15:25:44 +0100
+Processing by Administration::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yk/aOGAa9mQACSvn1WsFTy9X8dpEneXJqGMJpZQnl8G9rwTpDHbTjogKWGHiyUTYyWhSXDTU6I3VWVodANdw1w==", "item"=>{"discount_percentage"=>"30"}, "commit"=>"Modifier", "id"=>"10"}
+  [1m[36mItem Load (3.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/administration/items_controller.rb:10
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[36mItem Update (2.4ms)[0m  [1m[33mUPDATE "items" SET "discount_percentage" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["discount_percentage", 30], ["updated_at", "2019-01-09 14:25:44.992700"], ["id", 10]]
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[35m (54.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 71.9ms)
+
+
+  
+NoMethodError (undefined method `<' for nil:NilClass):
+  
+app/controllers/administration/items_controller.rb:12:in `update'
+Started GET "/" for 127.0.0.1 at 2019-01-09 15:26:17 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:21
+  Rendered administration/items/index.html.erb within layouts/administration (43.2ms)
+  Rendered layouts/administration/_sidebar.html.erb (3.0ms)
+  Rendered layouts/shared/_flash_messages.html.erb (1.0ms)
+Completed 200 OK in 262ms (Views: 207.9ms | ActiveRecord: 2.8ms)
+
+
+Started PUT "/administration/items/2" for 127.0.0.1 at 2019-01-09 15:26:31 +0100
+Processing by Administration::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t4gAYCT2gX/Kl8x3y3mhkjVokxch4bJcIgw7ZrNE9RJz8pog7aFCqVLaLOOmquUOOhiX1o80XIanIUQEeg1VJg==", "item"=>{"discount_percentage"=>"20"}, "commit"=>"Modifier", "id"=>"2"}
+  [1m[36mItem Load (2.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/administration/items_controller.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[36mItem Update (2.3ms)[0m  [1m[33mUPDATE "items" SET "discount_percentage" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["discount_percentage", 20], ["updated_at", "2019-01-09 14:26:32.025922"], ["id", 2]]
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 21.8ms)
+
+
+  
+NoMethodError (undefined method `<' for nil:NilClass):
+  
+app/controllers/administration/items_controller.rb:12:in `update'
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (5080.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mvc_exercise_development"[0m
+  ↳ bin/rails:4
+Started GET "/" for 127.0.0.1 at 2019-01-09 15:27:35 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:21
+  Rendered administration/items/index.html.erb within layouts/administration (11.0ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.6ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.9ms)
+Completed 200 OK in 296ms (Views: 209.9ms | ActiveRecord: 2.6ms)
+
+
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mItem Create (1.9ms)[0m  [1m[32mINSERT INTO "items" ("name", "original_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Dega"], ["original_price", 33.23], ["created_at", "2019-01-09 14:28:12.004032"], ["updated_at", "2019-01-09 14:28:12.004032"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mItem Create (1.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "original_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Villalobos"], ["original_price", 60.46], ["created_at", "2019-01-09 14:28:12.012906"], ["updated_at", "2019-01-09 14:28:12.012906"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mItem Create (1.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "original_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Agaro"], ["original_price", 97.05], ["created_at", "2019-01-09 14:28:12.019138"], ["updated_at", "2019-01-09 14:28:12.019138"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mItem Create (1.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "original_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Catuai"], ["original_price", 41.38], ["created_at", "2019-01-09 14:28:12.025380"], ["updated_at", "2019-01-09 14:28:12.025380"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mItem Create (1.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "original_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "S288"], ["original_price", 76.32], ["created_at", "2019-01-09 14:28:12.032317"], ["updated_at", "2019-01-09 14:28:12.032317"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mItem Create (1.7ms)[0m  [1m[32mINSERT INTO "items" ("name", "original_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ennarea"], ["original_price", 48.05], ["created_at", "2019-01-09 14:28:12.040330"], ["updated_at", "2019-01-09 14:28:12.040330"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mItem Create (1.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "original_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ethiopian Heirloom"], ["original_price", 87.15], ["created_at", "2019-01-09 14:28:12.048718"], ["updated_at", "2019-01-09 14:28:12.048718"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mItem Create (3.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "original_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Caturra"], ["original_price", 26.74], ["created_at", "2019-01-09 14:28:12.057257"], ["updated_at", "2019-01-09 14:28:12.057257"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mItem Create (1.8ms)[0m  [1m[32mINSERT INTO "items" ("name", "original_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Catimors"], ["original_price", 67.21], ["created_at", "2019-01-09 14:28:12.070556"], ["updated_at", "2019-01-09 14:28:12.070556"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mItem Create (1.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "original_price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Geisha"], ["original_price", 93.99], ["created_at", "2019-01-09 14:28:12.078302"], ["updated_at", "2019-01-09 14:28:12.078302"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+Started GET "/" for 127.0.0.1 at 2019-01-09 15:28:14 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (4.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:21
+  Rendered administration/items/index.html.erb within layouts/administration (28.3ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.7ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.6ms)
+Completed 200 OK in 248ms (Views: 196.1ms | ActiveRecord: 4.1ms)
+
+
+Started PUT "/administration/items/11" for 127.0.0.1 at 2019-01-09 15:28:24 +0100
+Processing by Administration::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jf6hILH4ZJm/4Jp47Cy6+vj24djrsBe7hQ5VWYAw0t7Uo10da4pNZmdkDLrJCoXxKDXDh75UGBDZvoXpBk4tLg==", "item"=>{"discount_percentage"=>"10"}, "commit"=>"Modifier", "id"=>"11"}
+  [1m[36mItem Load (2.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/administration/items_controller.rb:10
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[36mItem Update (2.1ms)[0m  [1m[33mUPDATE "items" SET "discount_percentage" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["discount_percentage", 10], ["updated_at", "2019-01-09 14:28:24.782062"], ["id", 11]]
+  ↳ app/controllers/administration/items_controller.rb:11
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/administration/items_controller.rb:11
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 14.5ms)
+
+
+  
+NoMethodError (undefined method `<' for nil:NilClass):
+  
+app/controllers/administration/items_controller.rb:12:in `update'
+Started GET "/" for 127.0.0.1 at 2019-01-09 15:31:01 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:21
+  Rendered administration/items/index.html.erb within layouts/administration (49.1ms)
+  Rendered layouts/administration/_sidebar.html.erb (4.2ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.8ms)
+Completed 200 OK in 863ms (Views: 755.0ms | ActiveRecord: 2.8ms)
+
+
+Started PUT "/administration/items/13" for 127.0.0.1 at 2019-01-09 15:31:10 +0100
+Processing by Administration::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ue6n9gBAdlwHC+W1Do69HujkmsWravf+A4tSSx0d/AsDKWfybK1h4IFmeH/kN9DBvR9iFO6jR4665RwRCxeAWw==", "item"=>{"discount_percentage"=>"30"}, "commit"=>"Modifier", "id"=>"13"}
+  [1m[36mItem Load (2.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/administration/items_controller.rb:10
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 5.9ms)
+
+
+  
+ArgumentError (comparison of String with 100 failed):
+  
+app/controllers/administration/items_controller.rb:11:in `<'
+app/controllers/administration/items_controller.rb:11:in `update'
+Started GET "/" for 127.0.0.1 at 2019-01-09 15:31:29 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:21
+  Rendered administration/items/index.html.erb within layouts/administration (18.5ms)
+  Rendered layouts/administration/_sidebar.html.erb (5.0ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.6ms)
+Completed 200 OK in 157ms (Views: 130.0ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/administration/items/14" for 127.0.0.1 at 2019-01-09 15:31:35 +0100
+Processing by Administration::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yqOhddxmCbdUTGIW5ZWHXHPDGGzTxK75CHUc792NrM8/dztvIRf142cIl9sKwdf8bFwsiCgnYDoz4AXukrkdjQ==", "item"=>{"discount_percentage"=>"20"}, "commit"=>"Modifier", "id"=>"14"}
+  [1m[36mItem Load (2.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/administration/items_controller.rb:10
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 12.3ms)
+
+
+  
+ArgumentError (comparison of String with 100.0 failed):
+  
+app/controllers/administration/items_controller.rb:11:in `<'
+app/controllers/administration/items_controller.rb:11:in `update'
+Started GET "/" for 127.0.0.1 at 2019-01-09 15:32:13 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (5.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:21
+  Rendered administration/items/index.html.erb within layouts/administration (38.9ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.6ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.6ms)
+Completed 200 OK in 779ms (Views: 662.7ms | ActiveRecord: 15.3ms)
+
+
+Started PUT "/administration/items/12" for 127.0.0.1 at 2019-01-09 15:32:22 +0100
+Processing by Administration::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j5uqMGPMrIrfcIgmbmzLBluW3jOXec1Lx9aDVz9psysIYndEVCEfqYF3RFJYPl7P2KIoH7gofb0FnJWKfjtUZA==", "item"=>{"discount_percentage"=>"30"}, "commit"=>"Modifier", "id"=>"12"}
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/administration/items_controller.rb:10
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/administration/items_controller.rb:12
+  [1m[36mItem Update (1.8ms)[0m  [1m[33mUPDATE "items" SET "discount_percentage" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["discount_percentage", 30], ["updated_at", "2019-01-09 14:32:22.135926"], ["id", 12]]
+  ↳ app/controllers/administration/items_controller.rb:12
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/administration/items_controller.rb:12
+Redirected to http://localhost:3000/administration/items
+Completed 302 Found in 21ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/administration/items" for 127.0.0.1 at 2019-01-09 15:32:22 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:21
+  Rendered administration/items/index.html.erb within layouts/administration (17.5ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.4ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.7ms)
+Completed 200 OK in 63ms (Views: 57.7ms | ActiveRecord: 2.1ms)
+
+
+Started PUT "/administration/items/13" for 127.0.0.1 at 2019-01-09 15:32:35 +0100
+Processing by Administration::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o7BzS0tsS7lhqlgp6b3bGLVHL3cgkj09HMW9U6901IIZd7NPJ4FcBefHxeMDBLbH4LzXpmVbjU2lq/MJuX6o0g==", "item"=>{"discount_percentage"=>"120"}, "commit"=>"Modifier", "id"=>"13"}
+  [1m[36mItem Load (3.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/administration/items_controller.rb:10
+Redirected to http://localhost:3000/administration/items
+Completed 302 Found in 5ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/administration/items" for 127.0.0.1 at 2019-01-09 15:32:35 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:21
+  Rendered administration/items/index.html.erb within layouts/administration (18.2ms)
+  Rendered layouts/administration/_sidebar.html.erb (1.8ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.7ms)
+Completed 200 OK in 88ms (Views: 69.5ms | ActiveRecord: 2.0ms)
+
+

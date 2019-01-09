@@ -8,8 +8,12 @@ module Administration
 
     def update
       @item = Item.find(params[:id])
-      @item.update(item_params)
-      flash[:notice] = "Le prix à été modifié avec succès !"
+      if params[:item][:discount_percentage].to_f < 100
+        @item.update(item_params)
+        flash[:notice] = "Le prix à été modifié avec succès !"
+      else
+        flash[:alert] = "Le pourcentage de remise n'est pas valable"
+      end
       redirect_to administration_items_path
     end
 
