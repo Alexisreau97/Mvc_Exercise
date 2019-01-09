@@ -3,14 +3,14 @@
 module Administration
   class ItemsController < AdministrationController
     def index
-    	@items = Item.all
+      @items = Item.all
     end
 
     def update
       @item = Item.find(params[:id])
       if params[:item][:discount_percentage].to_f < 100
         @item.update(item_params)
-        flash[:notice] = "Le prix à été modifié avec succès !"
+        flash[:notice] = 'Le prix à été modifié avec succès !'
       else
         flash[:alert] = "Le pourcentage de remise n'est pas valable"
       end
@@ -20,7 +20,7 @@ module Administration
     private
 
     def item_params
-    	params.require(:item).permit(:discount_percentage)
+      params.require(:item).permit(:discount_percentage)
     end
   end
 end
