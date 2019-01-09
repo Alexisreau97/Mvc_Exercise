@@ -22,9 +22,9 @@
 								<tbody>
 									<tr>
 										<th><%= item.original_price %></th>
-										<th><%= f.number_field :discount_percentage %></th>
+										<th><%= f.number_field :discount_percentage, class: "form-control" %></th>
 										<th><%= item.price %></th>
-										<th><%= f.submit "Modifier" %></th>
+										<th><%= f.submit "Modifier", class: "btn btn-primary" %></th>
 									</tr>
 								</tbody>
 								<% end %>
