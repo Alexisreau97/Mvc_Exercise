@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2019_01_05_150742) do
   enable_extension "plpgsql"
 
   create_table "items", force: :cascade do |t|
+    t.string "name"
     t.float "original_price", null: false
     t.boolean "has_discount", default: false
     t.integer "discount_percentage", default: 0
