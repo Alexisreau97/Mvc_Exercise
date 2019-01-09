@@ -9,6 +9,7 @@ module Administration
     def update
       @item = Item.find(params[:id])
       @item.update(item_params)
+      flash[:notice] = "Le prix à été modifié avec succès !"
       redirect_to administration_items_path
     end
 

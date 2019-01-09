@@ -20,6 +20,7 @@ RSpec.describe Item, type: :model do
 
     describe 'Database' do
       it { is_expected.to have_db_column(:id).of_type(:integer) }
+      it { is_expected.to have_db_column(:name).of_type(:string) }
       it { is_expected.to have_db_column(:original_price).of_type(:float).with_options(null: false) }
       it { is_expected.to have_db_column(:has_discount).of_type(:boolean).with_options(default: false) }
       it { is_expected.to have_db_column(:discount_percentage).of_type(:integer).with_options(default: 0) }
@@ -38,7 +39,7 @@ RSpec.describe Item, type: :model do
 
   describe 'Price without discount' do
     context 'when the item has not a discount' do
-      let(:item) { build(:item_without_discount, original_price: 100.00, discount_percentage: nil) }
+      let(:item) { build(:item_without_discount, original_price: 100.00, discount_percentage: 0) }
 
       it { expect(item.price).to eq(100.00) }
     end
