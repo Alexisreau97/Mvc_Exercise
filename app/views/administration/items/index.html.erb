@@ -2,8 +2,11 @@
 	<div class="container-fluid p-0">
 		<p>USER</p>
 		<%= link_to "S'inscrire", new_user_registration_path %>
-		<%= link_to 'Se connecter', new_user_session_path %>
-		<%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %>
+		<% if user_signed_in? %>
+			<%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %>
+		<% else %>
+			<%= link_to 'Se connecter', new_user_session_path %>
+		<% end %>
 		<br><br>
 		signed in ? :<%= debug user_signed_in? %>
 		current user :<%= debug current_user %>
@@ -11,8 +14,11 @@
 
 		<p>ADMIN</p>
 		<%= link_to "S'inscrire", new_admin_registration_path %>
-		<%= link_to 'Se connecter', new_admin_session_path %>
-		<%= link_to 'Se déconnecter', destroy_admin_session_path, method: :delete %>
+		<% if admin_signed_in? %>
+			<%= link_to 'Se déconnecter', destroy_admin_session_path, method: :delete %>
+		<% else %>
+			<%= link_to 'Se connecter', new_admin_session_path %>
+		<% end %>
 		<br><br>
 		signed in ? :<%= debug admin_signed_in? %>
 		current admin :<%= debug current_admin %>
