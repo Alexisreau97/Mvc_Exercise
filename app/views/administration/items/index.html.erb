@@ -1,12 +1,21 @@
 <main class="content">
 	<div class="container-fluid p-0">
-
+		<p>USER</p>
 		<%= link_to "S'inscrire", new_user_registration_path %>
 		<%= link_to 'Se connecter', new_user_session_path %>
 		<%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %>
 		<br><br>
 		signed in ? :<%= debug user_signed_in? %>
 		current user :<%= debug current_user %>
+		<br><br>
+
+		<p>ADMIN</p>
+		<%= link_to "S'inscrire", new_admin_registration_path %>
+		<%= link_to 'Se connecter', new_admin_session_path %>
+		<%= link_to 'Se déconnecter', destroy_admin_session_path, method: :delete %>
+		<br><br>
+		signed in ? :<%= debug admin_signed_in? %>
+		current admin :<%= debug current_admin %>
 		<br><br>
 
 		<h1 class="h3 mb-3">Items</h1>
