@@ -708,6 +708,10 @@
         2,
         2,
         null,
+        null,
+        1,
+        2,
+        null,
         null
       ],
       "/Users/reaualexis/thp-next/exo_1/spec/models/category_spec.rb": [
@@ -819,6 +823,8 @@
         2,
         null,
         null,
+        1,
+        2,
         null,
         null
       ],
@@ -832,6 +838,6 @@
 
       ]
     },
-    "timestamp": 1547471985
+    "timestamp": 1547474620
   }
 }
