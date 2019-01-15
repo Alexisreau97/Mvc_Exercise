@@ -7896,3 +7896,79 @@ Processing by Administration::ItemsController#index as HTML
 Completed 200 OK in 835ms (Views: 794.4ms | ActiveRecord: 12.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-01-15 16:58:52 +0100
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (76.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (241.9ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.7ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.8ms)
+Completed 200 OK in 1218ms (Views: 1050.8ms | ActiveRecord: 88.8ms)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2019-01-15 16:58:56 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (471.3ms)
+Completed 200 OK in 646ms (Views: 599.4ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2019-01-15 16:58:57 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 64ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins" for 127.0.0.1 at 2019-01-15 16:59:18 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4ctMS7uyDFf2z+Lru7wvJow2BH+ZpbbxfYWvUXCKPXerZiHgVW/uYre3X5fPJLoDjflXrrEkQ+oRjx0D8ki/jg==", "admin"=>{"email"=>"stp@stp.stp", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdmin Exists (3.7ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "stp@stp.stp"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdmin Create (3.2ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "confirmation_token", "confirmation_sent_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "stp@stp.stp"], ["encrypted_password", "$2a$11$PqdG6UVQ9RsdId.rzy42N.OoyKNoNY7lw4Ih11jcDdzirGna1gMgO"], ["confirmation_token", "Xwry-Cfybu-JB97DUTkE"], ["confirmation_sent_at", "2019-01-15 15:59:18.568874"], ["created_at", "2019-01-15 15:59:18.568624"], ["updated_at", "2019-01-15 15:59:18.568624"]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (1.7ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 150.0ms
+Sent mail to stp@stp.stp (767.4ms)
+Date: Tue, 15 Jan 2019 16:59:19 +0100
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: stp@stp.stp
+Message-ID: <5c3e03572037a_b253fe01454313c2078f@netrestore-a8206613d6e1.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome stp@stp.stp!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/admins/confirmation?confirmation_token=Xwry-Cfybu-JB97DUTkE">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 1640ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 16:59:19 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (26.2ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.1ms)
+  Rendered layouts/shared/_flash_messages.html.erb (1.0ms)
+Completed 200 OK in 207ms (Views: 184.1ms | ActiveRecord: 10.0ms)
+
+
