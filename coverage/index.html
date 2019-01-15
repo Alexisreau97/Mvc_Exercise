@@ -14,26 +14,26 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-01-14T15:03:40+01:00">2019-01-14T15:03:40+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-01-15T15:44:43+01:00">2019-01-15T15:44:43+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">93.49%</span></span>
+    (<span class="covered_percent"><span class="green">94.21%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.12
+         1.21
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>37</b> files in total.
-    <b>169</b> relevant lines. 
-    <span class="green"><b>158</b> lines covered</span> and
+    <b>190</b> relevant lines. 
+    <span class="green"><b>179</b> lines covered</span> and
     <span class="red"><b>11</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -183,9 +183,9 @@
       <tr>
         <td class="strong"><a href="#52d6aab1ffd49c89a87adcd40b2b11362a7456ea" class="src_link" title="config/environments/test.rb">config/environments/test.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>46</td>
-        <td>13</td>
-        <td>13</td>
+        <td>55</td>
+        <td>16</td>
+        <td>16</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -313,7 +313,7 @@
       <tr>
         <td class="strong"><a href="#afab6da8a219e03c215a2f15cce55a3f74926677" class="src_link" title="spec/factories/admins.rb">spec/factories/admins.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>5</td>
+        <td>4</td>
         <td>2</td>
         <td>2</td>
         <td>0</td>
@@ -343,7 +343,7 @@
       <tr>
         <td class="strong"><a href="#62be00b19a4f180d15b1ee8bc8b51a981c825b35" class="src_link" title="spec/factories/users.rb">spec/factories/users.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>5</td>
+        <td>4</td>
         <td>2</td>
         <td>2</td>
         <td>0</td>
@@ -353,11 +353,11 @@
       <tr>
         <td class="strong"><a href="#554ae087e023bc4ee0cd858a91e14592017e841d" class="src_link" title="spec/models/admin_spec.rb">spec/models/admin_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>12</td>
-        <td>7</td>
-        <td>7</td>
+        <td>21</td>
+        <td>16</td>
+        <td>16</td>
         <td>0</td>
-        <td>1.4</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -383,11 +383,11 @@
       <tr>
         <td class="strong"><a href="#0dcded818880daf74b6a2cc5fded11ffd3c584f6" class="src_link" title="spec/models/user_spec.rb">spec/models/user_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>12</td>
-        <td>7</td>
-        <td>7</td>
+        <td>27</td>
+        <td>16</td>
+        <td>16</td>
         <td>0</td>
-        <td>1.4</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -477,7 +477,7 @@
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">    before_action :authenticate_admin!, :except =&gt; [:index]</code>
+          <code class="ruby">    before_action :authenticate_admin!, except: [:index]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -1594,8 +1594,8 @@
     <h3>config/environments/test.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>13</b> relevant lines. 
-      <span class="green"><b>13</b> lines covered</span> and
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1874,6 +1874,60 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">  # Mailer</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="48">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  config.action_mailer.default_url_options = { host: &#39;localhost&#39;, port: 3000 }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  config.action_mailer.delivery_method = :smtp</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="51">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    config.action_mailer.smtp_settings = {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby">        :address =&gt; &quot;localhost&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby">        :port =&gt; 25</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby">    }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
           
           
           <code class="ruby">end</code>
@@ -2476,7 +2530,7 @@
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby">  </code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
@@ -4727,16 +4781,10 @@
         <li class="never" data-hits="" data-linenumber="3">
           
           
-          <code class="ruby">    </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="4">
-          
-          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="never" data-hits="" data-linenumber="4">
           
           
           <code class="ruby">end</code>
@@ -5042,16 +5090,10 @@
         <li class="never" data-hits="" data-linenumber="3">
           
           
-          <code class="ruby">    </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="4">
-          
-          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="never" data-hits="" data-linenumber="4">
           
           
           <code class="ruby">end</code>
@@ -5067,8 +5109,8 @@
     <h3>spec/models/admin_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>7</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5097,52 +5139,106 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">	describe &#39;Database&#39; do</code>
+          <code class="ruby">  describe &#39;Database&#39; do</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="5">
           <span class="hits">2</span>
           
-          <code class="ruby">    	it { is_expected.to have_db_column(:email).of_type(:string).with_options(default: &quot;&quot;, null: false) }</code>
+          <code class="ruby">    it { is_expected.to have_db_column(:email).of_type(:string).with_options(default: &#39;&#39;, null: false) }</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="6">
           <span class="hits">2</span>
           
-          <code class="ruby">    	it { is_expected.to have_db_column(:encrypted_password).of_type(:string).with_options(default: &quot;&quot;, null: false) }</code>
+          <code class="ruby">    it { is_expected.to have_db_column(:encrypted_password).of_type(:string).with_options(default: &#39;&#39;, null: false) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="covered" data-hits="2" data-linenumber="7">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">	end</code>
+          <code class="ruby">    it { is_expected.to have_db_column(:reset_password_token).of_type(:string) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    it { is_expected.to have_db_column(:reset_password_sent_at).of_type(:datetime) }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
           
-          <code class="ruby">	describe &#39;validations&#39; do</code>
+          <code class="ruby">    it { is_expected.to have_db_column(:remember_created_at).of_type(:datetime) }</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="10">
           <span class="hits">2</span>
           
-          <code class="ruby">  		it { should validate_presence_of(:email) }</code>
+          <code class="ruby">    it { is_expected.to have_db_column(:confirmation_token).of_type(:string) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="covered" data-hits="2" data-linenumber="11">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">	end</code>
+          <code class="ruby">    it { is_expected.to have_db_column(:confirmed_at).of_type(:datetime) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="covered" data-hits="2" data-linenumber="12">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it { is_expected.to have_db_column(:confirmation_sent_at).of_type(:datetime) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="13">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it { is_expected.to have_db_column(:unconfirmed_email).of_type(:string) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="14">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it { is_expected.to have_db_column(:created_at).of_type(:datetime).with_options(null: false) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="15">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it { is_expected.to have_db_column(:updated_at).of_type(:datetime).with_options(null: false) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;validations&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="19">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it { should validate_presence_of(:email) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">end</code>
@@ -5550,8 +5646,8 @@
     <h3>spec/models/user_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>7</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5580,55 +5676,145 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">	describe &#39;Database&#39; do</code>
+          <code class="ruby">  describe &#39;Database&#39; do</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="5">
           <span class="hits">2</span>
           
-          <code class="ruby">    	it { is_expected.to have_db_column(:email).of_type(:string).with_options(default: &quot;&quot;, null: false) }</code>
+          <code class="ruby">    it { is_expected.to have_db_column(:email).of_type(:string).with_options(default: &#39;&#39;, null: false) }</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="6">
           <span class="hits">2</span>
           
-          <code class="ruby">    	it { is_expected.to have_db_column(:encrypted_password).of_type(:string).with_options(default: &quot;&quot;, null: false) }</code>
+          <code class="ruby">    it { is_expected.to have_db_column(:encrypted_password).of_type(:string).with_options(default: &#39;&#39;, null: false) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="covered" data-hits="2" data-linenumber="7">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">	end</code>
+          <code class="ruby">    it { is_expected.to have_db_column(:reset_password_token).of_type(:string) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    it { is_expected.to have_db_column(:reset_password_sent_at).of_type(:datetime) }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
           
-          <code class="ruby">	describe &#39;validations&#39; do</code>
+          <code class="ruby">    it { is_expected.to have_db_column(:remember_created_at).of_type(:datetime) }</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="10">
           <span class="hits">2</span>
           
-          <code class="ruby">  		it { should validate_presence_of(:email) }</code>
+          <code class="ruby">    it { is_expected.to have_db_column(:confirmation_token).of_type(:string) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="covered" data-hits="2" data-linenumber="11">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">	end</code>
+          <code class="ruby">    it { is_expected.to have_db_column(:confirmed_at).of_type(:datetime) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="covered" data-hits="2" data-linenumber="12">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it { is_expected.to have_db_column(:confirmation_sent_at).of_type(:datetime) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="13">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it { is_expected.to have_db_column(:unconfirmed_email).of_type(:string) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="14">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it { is_expected.to have_db_column(:created_at).of_type(:datetime).with_options(null: false) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="15">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it { is_expected.to have_db_column(:updated_at).of_type(:datetime).with_options(null: false) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;validations&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="20">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it { should validate_presence_of(:email) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">    # t.index [&#39;email&#39;], name: &#39;index_users_on_email&#39;, unique: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">    # t.index [&#39;reset_password_token&#39;], name: &#39;index_users_on_reset_password_token&#39;, unique: true</code>
         </li>
       
     </ol>

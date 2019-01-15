@@ -106,6 +106,15 @@
         null,
         null,
         null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/reaualexis/thp-next/exo_1/config/initializers/application_controller_renderer.rb": [
@@ -537,7 +546,6 @@
         1,
         1,
         null,
-        null,
         null
       ],
       "/Users/reaualexis/thp-next/exo_1/spec/factories/categories.rb": [
@@ -585,7 +593,6 @@
       "/Users/reaualexis/thp-next/exo_1/spec/factories/users.rb": [
         1,
         1,
-        null,
         null,
         null
       ],
@@ -707,6 +714,15 @@
         1,
         2,
         2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
         null,
         null,
         1,
@@ -821,10 +837,25 @@
         1,
         2,
         2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
         null,
         null,
         1,
         2,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null
       ],
@@ -838,6 +869,6 @@
 
       ]
     },
-    "timestamp": 1547474620
+    "timestamp": 1547563482
   }
 }
