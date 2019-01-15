@@ -2,7 +2,7 @@
 
 module Administration
   class ItemsController < AdministrationController
-    before_action :authenticate_admin!, :except => [:index]
+    before_action :authenticate_admin!, except: [:index]
 
     def index
       @items = Item.all

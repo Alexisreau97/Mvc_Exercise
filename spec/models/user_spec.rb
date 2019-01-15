@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-	describe 'Database' do
-    	it { is_expected.to have_db_column(:email).of_type(:string).with_options(default: "", null: false) }
-    	it { is_expected.to have_db_column(:encrypted_password).of_type(:string).with_options(default: "", null: false) }
-	end
+  describe 'Database' do
+    it { is_expected.to have_db_column(:email).of_type(:string).with_options(default: '', null: false) }
+    it { is_expected.to have_db_column(:encrypted_password).of_type(:string).with_options(default: '', null: false) }
+  end
 
-	describe 'validations' do
-  		it { should validate_presence_of(:email) }
-	end
+  describe 'validations' do
+    it { should validate_presence_of(:email) }
+  end
 end

@@ -6221,3 +6221,1045 @@ Processing by Administration::ItemsController#index as HTML
 Completed 200 OK in 1854ms (Views: 1756.7ms | ActiveRecord: 20.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-01-15 12:34:06 +0100
+  [1m[35m (72.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (28.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (448.2ms)
+  Rendered layouts/administration/_sidebar.html.erb (1.8ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.7ms)
+Completed 200 OK in 2428ms (Views: 2127.4ms | ActiveRecord: 88.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 13:42:24 +0100
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (150.9ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.7ms)
+  Rendered layouts/shared/_flash_messages.html.erb (1.1ms)
+Completed 200 OK in 1061ms (Views: 944.4ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-15 14:15:46 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (538.4ms)
+Completed 200 OK in 1296ms (Views: 1209.1ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-15 14:15:48 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-15 14:15:59 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V+zeVeUTyZGLnPmu0gs+5BE5mMkBB6xEYqQ/jnx1C3WWj8gKRXrMcOqsAjR+2KAUvcHJIj1MKYkNikKmaHTjxw==", "user"=>{"email"=>"alexis@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (89.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "alexis@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (107.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmation_token", "confirmation_sent_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "alexis@gmail.com"], ["encrypted_password", "$2a$11$XgpUw18BWXYlfqiPPVF8Gu1UlYbY3QiaIZu8gk4cwyx/FlfOwK4m."], ["confirmation_token", "syrsxECw27fWW_GWH2Af"], ["confirmation_sent_at", "2019-01-15 13:16:00.648734"], ["created_at", "2019-01-15 13:16:00.648271"], ["updated_at", "2019-01-15 13:16:00.648271"]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (29.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (36.7ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 108.0ms
+Completed 500 Internal Server Error in 2039ms (ActiveRecord: 227.9ms)
+
+
+  
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>You can confirm your account email through the link below:</p>
+    4: 
+    5: <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+  
+app/views/devise/mailer/confirmation_instructions.html.erb:5:in `_app_views_devise_mailer_confirmation_instructions_html_erb__723539663462771749_70309653870320'
+Started GET "/" for 127.0.0.1 at 2019-01-15 14:16:46 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (39.6ms)
+  Rendered layouts/administration/_sidebar.html.erb (15.3ms)
+  Rendered layouts/shared/_flash_messages.html.erb (1.5ms)
+Completed 200 OK in 268ms (Views: 210.7ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 14:16:46 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (3.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (17.0ms)
+  Rendered layouts/administration/_sidebar.html.erb (34.3ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.6ms)
+Completed 200 OK in 129ms (Views: 120.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-15 14:16:51 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 167ms (Views: 165.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-15 14:16:51 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-15 14:17:12 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QrUdWBV6nTTHu9QSZw36lsNbypntdrZZrK/Dvb8BSuSD1gsHtROY1aaLL4jL3mRmb6ObctE9M5TDgb6VqwCiVg==", "user"=>{"email"=>"test@test.test", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.test"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 333ms (Views: 64.2ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-15 14:17:24 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ptZ71lfJL1McOIcFcMtPnSQF70WPOnufpHEaTUJw67lntW2J96Aqsn0IfJ/cGNFtiP2+rrNx/lLLX2dlVnEDCw==", "user"=>{"email"=>"test@test.test", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.test"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmation_token", "confirmation_sent_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test@test.test"], ["encrypted_password", "$2a$11$bC.gOomeEr41gNanD.yRf.AiAnrwyuJmX8bQPSzn.ZH7thIE4AGdW"], ["confirmation_token", "xPcz5rJMGhA3UpQthdHv"], ["confirmation_sent_at", "2019-01-15 13:17:25.143141"], ["created_at", "2019-01-15 13:17:25.142710"], ["updated_at", "2019-01-15 13:17:25.142710"]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (3.9ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 68.7ms
+Completed 500 Internal Server Error in 243ms (ActiveRecord: 10.3ms)
+
+
+  
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>You can confirm your account email through the link below:</p>
+    4: 
+    5: <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+  
+app/views/devise/mailer/confirmation_instructions.html.erb:5:in `_app_views_devise_mailer_confirmation_instructions_html_erb__723539663462771749_70309593749540'
+Started GET "/" for 127.0.0.1 at 2019-01-15 14:21:46 +0100
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (159.6ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.0ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.5ms)
+Completed 200 OK in 1391ms (Views: 1300.5ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2019-01-15 14:22:16 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (370.8ms)
+Completed 200 OK in 635ms (Views: 603.2ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2019-01-15 14:22:17 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 56ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins" for 127.0.0.1 at 2019-01-15 14:22:25 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XIQ+TjqY5BLgADJNN2ZZBr08TSKX0numT1A2aNHajyad5ygRmvHh84Ewydebtcf2EcQcyauZ/msgfktAxdtnlA==", "admin"=>{"email"=>"test@test.test", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdmin Exists (57.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "test@test.test"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdmin Create (39.5ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "confirmation_token", "confirmation_sent_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test@test.test"], ["encrypted_password", "$2a$11$poXjnjTpFRWSSQmxY0kRT.WeEjDTbydqt4qwvBu./7Jheg2DqNL6q"], ["confirmation_token", "kQQ6dxDBFLQAapsiE8iU"], ["confirmation_sent_at", "2019-01-15 13:22:25.483875"], ["created_at", "2019-01-15 13:22:25.483662"], ["updated_at", "2019-01-15 13:22:25.483662"]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (34.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (1.6ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 308.5ms
+Sent mail to test@test.test (35.8ms)
+Date: Tue, 15 Jan 2019 14:22:26 +0100
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: test@test.test
+Message-ID: <5c3dde92684b1_6f13fe10681c4886626a@netrestore-a8206613d6e1.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome test@test.test!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/admins/confirmation?confirmation_token=kQQ6dxDBFLQAapsiE8iU">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 1435ms (ActiveRecord: 134.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 14:22:26 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (22.4ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.3ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.5ms)
+Completed 200 OK in 134ms (Views: 95.0ms | ActiveRecord: 9.3ms)
+
+
+Started PUT "/administration/items/3" for 127.0.0.1 at 2019-01-15 14:22:38 +0100
+Processing by Administration::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dl1VENz3Hxkxtimb+rAUoWBkIthFQuCHT2el08mX3cIckwI6/gx/vhuzIrMv9ZwiMClLM4WG0MVcx7GJAxLStg==", "item"=>{"discount_percentage"=>"90"}, "commit"=>"Modifier", "id"=>"3"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-01-15 14:22:38 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (49.5ms)
+Completed 200 OK in 125ms (Views: 123.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2019-01-15 14:22:47 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"euTQ0z9f1quXqljSwLBOw5BtP8VsIxu7UsgxTQ4wyaG7h8aMnzbTSvaao0hsY9AzPJVuLlBonnY95kxlGjEhEw==", "admin"=>{"email"=>"test@test.test", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (2.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "test@test.test"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 353ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-01-15 14:22:47 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 92ms (Views: 90.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/confirmation?confirmation_token=kQQ6dxDBFLQAapsiE8iU" for 127.0.0.1 at 2019-01-15 14:23:13 +0100
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"kQQ6dxDBFLQAapsiE8iU"}
+  [1m[36mAdmin Load (2.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."confirmation_token" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["confirmation_token", "kQQ6dxDBFLQAapsiE8iU"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdmin Update (23.9ms)[0m  [1m[33mUPDATE "admins" SET "confirmed_at" = $1, "updated_at" = $2 WHERE "admins"."id" = $3[0m  [["confirmed_at", "2019-01-15 13:23:13.411637"], ["updated_at", "2019-01-15 13:23:13.413862"], ["id", 2]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 51ms (ActiveRecord: 43.1ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-01-15 14:23:13 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (49.1ms)
+Completed 200 OK in 499ms (Views: 497.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2019-01-15 14:23:38 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SyPIDPYcZEyZZjJgtccHH+plY9sn8+TUyrrJTCSNVkmKQN5TVnVhrfhWyfoZFJnvRp0yMBu4YRmllLRkMIy++w==", "admin"=>{"email"=>"test@test.test", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (3.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "test@test.test"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 212ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 14:23:38 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mAdmin Load (2.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/administration/items/index.html.erb:17
+  [1m[36mItem Load (2.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (144.2ms)
+  Rendered layouts/administration/_sidebar.html.erb (47.9ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.7ms)
+Completed 200 OK in 429ms (Views: 401.0ms | ActiveRecord: 4.5ms)
+
+
+Started PUT "/administration/items/3" for 127.0.0.1 at 2019-01-15 14:23:52 +0100
+Processing by Administration::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QvU8hCHfeny0DXnsbO5+oMQ3FyhKJSumWjXGor4Gczort2VV594NDgZdya0v21wzARBqcfzdotlOj1wfxoq8UQ==", "item"=>{"discount_percentage"=>"90"}, "commit"=>"Modifier", "id"=>"3"}
+  [1m[36mAdmin Load (2.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/administration/items_controller.rb:12
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/administration/items_controller.rb:14
+  [1m[36mItem Update (3.4ms)[0m  [1m[33mUPDATE "items" SET "discount_percentage" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["discount_percentage", 90], ["updated_at", "2019-01-15 13:23:52.066696"], ["id", 3]]
+  ↳ app/controllers/administration/items_controller.rb:14
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/administration/items_controller.rb:14
+Redirected to http://localhost:3000/administration/items
+Completed 302 Found in 35ms (ActiveRecord: 14.4ms)
+
+
+Started GET "/administration/items" for 127.0.0.1 at 2019-01-15 14:23:52 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mAdmin Load (2.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/administration/items/index.html.erb:17
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (22.4ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.6ms)
+  Rendered layouts/shared/_flash_messages.html.erb (1.0ms)
+Completed 200 OK in 99ms (Views: 91.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 14:25:24 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mAdmin Load (2.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/administration/items/index.html.erb:17
+  [1m[36mItem Load (2.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (28.9ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.6ms)
+  Rendered layouts/shared/_flash_messages.html.erb (1.1ms)
+Completed 200 OK in 747ms (Views: 710.7ms | ActiveRecord: 5.1ms)
+
+
+Started DELETE "/admins/sign_out" for 127.0.0.1 at 2019-01-15 14:26:03 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4s3MWM3JPkgGhzkEzIvAl8mvqj60+rXeUwVdlTCtmSeBq8KHplwU3OrKDW5nGUTjp55Rrfb+7HSaaloMCF5zZQ=="}
+  [1m[36mAdmin Load (22.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 45ms (ActiveRecord: 26.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 14:26:04 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (14.3ms)
+  Rendered layouts/administration/_sidebar.html.erb (14.4ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.6ms)
+Completed 200 OK in 155ms (Views: 149.0ms | ActiveRecord: 2.5ms)
+
+
+Started PUT "/administration/items/4" for 127.0.0.1 at 2019-01-15 14:27:26 +0100
+Processing by Administration::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uCqS13Z+RmnMreK/iQX+XPvD3p1foeYemSz4xlY66hFn2FeBRczRTz+JUlv+efAOkWSbXdSTsdeWqNZ8aZe84A==", "item"=>{"discount_percentage"=>"100"}, "commit"=>"Modifier", "id"=>"4"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-01-15 14:27:27 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 864ms (Views: 862.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2019-01-15 14:27:45 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oz8SGYg7BRRyrzJOF2A7cFE+WkeMy5rYHSHxtjAZRCikop9eSU6MW0uP94JXGz/0PTlxRjkpGKJMPNG++ztskQ==", "admin"=>{"email"=>"test@test.test", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (2.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "test@test.test"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 189ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 14:27:45 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mAdmin Load (1.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/administration/items/index.html.erb:17
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (25.3ms)
+  Rendered layouts/administration/_sidebar.html.erb (36.9ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.6ms)
+Completed 200 OK in 236ms (Views: 213.4ms | ActiveRecord: 3.7ms)
+
+
+Started DELETE "/admins/sign_out" for 127.0.0.1 at 2019-01-15 14:30:48 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Bqy1p7CZv7nlveyYb3CXYmpXHv9x/x5ZefbIonsAIonlyr21ELr/KqUvgdCvvR8HB4IgvxunlMw2zU4ovCV+Og=="}
+  [1m[36mAdmin Load (1.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 14:30:48 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (4.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (17.8ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.3ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.6ms)
+Completed 200 OK in 947ms (Views: 877.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-01-15 14:31:05 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 190ms (Views: 188.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2019-01-15 14:31:11 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KZ4kriUaHOB+oH1v55NcWJyVkP0nnvtVrY6guk70jfsZRFL7t5tzBBq13NSZWc6aQnCbuOG59PU9CJWg3xL74g==", "admin"=>{"email"=>"test@test.test", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (2.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "test@test.test"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 172ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 14:31:11 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mAdmin Load (2.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/administration/items/index.html.erb:17
+  [1m[36mItem Load (3.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (28.9ms)
+  Rendered layouts/administration/_sidebar.html.erb (14.5ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.8ms)
+Completed 200 OK in 178ms (Views: 154.6ms | ActiveRecord: 5.8ms)
+
+
+Started DELETE "/admins/sign_out" for 127.0.0.1 at 2019-01-15 14:37:55 +0100
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EF2uSP1OrbR8UhA0unRtM64jpx44NSkmngpYFOpCAVBxJia68VLBdozZSy1FzOycQ44H0MWTld8jq/YpBvjdOg=="}
+  [1m[36mAdmin Load (2.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 499ms (ActiveRecord: 14.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 14:37:56 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (56.8ms)
+  Rendered layouts/administration/_sidebar.html.erb (4.1ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.9ms)
+Completed 200 OK in 987ms (Views: 897.1ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 14:38:00 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (13.9ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.3ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.5ms)
+Completed 200 OK in 68ms (Views: 59.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-15 14:38:03 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (49.4ms)
+Completed 200 OK in 273ms (Views: 220.8ms | ActiveRecord: 24.1ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-15 14:38:03 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 78ms (Views: 77.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-15 14:38:23 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mfxdaZRao/y/+ZemCTPDEG394uHJJqKQ0aS5ko/kHyEZrsamvXm/QU20cVtD7EigLKEHi/9tYAnBmFns4udsLg==", "user"=>{"email"=>"user@user.user", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (9.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user@user.user"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmation_token", "confirmation_sent_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "user@user.user"], ["encrypted_password", "$2a$11$/7PhxKVv2S8tE3TEtEE/l.yl2cWrr8br/Uh5EbO3oL0lzEXOm3ypq"], ["confirmation_token", "UjojoPsd3734mwie2jK_"], ["confirmation_sent_at", "2019-01-15 13:38:23.984052"], ["created_at", "2019-01-15 13:38:23.983855"], ["updated_at", "2019-01-15 13:38:23.983855"]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (21.5ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 85.8ms
+Completed 500 Internal Server Error in 810ms (ActiveRecord: 16.6ms)
+
+
+  
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>You can confirm your account email through the link below:</p>
+    4: 
+    5: <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+  
+app/views/devise/mailer/confirmation_instructions.html.erb:5:in `_app_views_devise_mailer_confirmation_instructions_html_erb__355700387718314995_70294424234980'
+Started POST "/users" for 127.0.0.1 at 2019-01-15 14:40:46 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mfxdaZRao/y/+ZemCTPDEG394uHJJqKQ0aS5ko/kHyEZrsamvXm/QU20cVtD7EigLKEHi/9tYAnBmFns4udsLg==", "user"=>{"email"=>"user@user.user", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user@user.user"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 1180ms (Views: 844.0ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 14:42:13 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (50.9ms)
+  Rendered layouts/administration/_sidebar.html.erb (3.4ms)
+  Rendered layouts/shared/_flash_messages.html.erb (1.3ms)
+Completed 200 OK in 1074ms (Views: 987.4ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-15 14:43:45 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 712ms (Views: 708.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-15 14:43:46 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 74ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-15 14:44:06 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"94olvyWLS8MlFv3p4tDDG9xkhlVQMAeje35imzkWDKt32L5wDKhXftdbGxSoD0irnThjP2Z7xTprQoLlVBV/pA==", "user"=>{"email"=>"yo@yo.yo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yo@yo.yo"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmation_token", "confirmation_sent_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "yo@yo.yo"], ["encrypted_password", "$2a$11$UuPpep6QPZgopmEZTNGQM.37wo0Zva0jUQb/2M3WA7zSXRU.Kvkam"], ["confirmation_token", "VBXHWGYzSBgXcFtdqNzE"], ["confirmation_sent_at", "2019-01-15 13:44:06.499803"], ["created_at", "2019-01-15 13:44:06.499219"], ["updated_at", "2019-01-15 13:44:06.499219"]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (26.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (5.2ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 79.3ms
+Completed 500 Internal Server Error in 281ms (ActiveRecord: 32.9ms)
+
+
+  
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>You can confirm your account email through the link below:</p>
+    4: 
+    5: <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+  
+app/views/devise/mailer/confirmation_instructions.html.erb:5:in `_app_views_devise_mailer_confirmation_instructions_html_erb__355700387718314995_70294479318000'
+Started GET "/users" for 127.0.0.1 at 2019-01-15 14:50:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-15 14:50:09 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (29.3ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.3ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.7ms)
+Completed 200 OK in 764ms (Views: 682.7ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-15 14:50:14 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (38.4ms)
+Completed 200 OK in 184ms (Views: 177.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-15 14:50:14 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 69ms (Views: 67.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-15 14:50:32 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gi4DChMQV+7iUdgyfyZSjuapxJ2CKUbb85Nhhks3M9KafJjFOjNLUxAcPs81+dk+p/Uh97RihELjr4H4JjRA3Q==", "user"=>{"email"=>"user@test.fr", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (3.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user@test.fr"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmation_token", "confirmation_sent_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "user@test.fr"], ["encrypted_password", "$2a$11$yw61G8CowGWhnSNA0nBYTeu2wutxcwm3rCvEbBbxnzt1BXY5wmrt."], ["confirmation_token", "N4nHcronZRLpsx1MDdLx"], ["confirmation_sent_at", "2019-01-15 13:50:32.981148"], ["created_at", "2019-01-15 13:50:32.979930"], ["updated_at", "2019-01-15 13:50:32.979930"]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (22.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (4.0ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 69.1ms
+Completed 500 Internal Server Error in 382ms (ActiveRecord: 29.6ms)
+
+
+  
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>You can confirm your account email through the link below:</p>
+    4: 
+    5: <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+  
+app/views/devise/mailer/confirmation_instructions.html.erb:5:in `_app_views_devise_mailer_confirmation_instructions_html_erb__355700387718314995_70294476825120'
+Started GET "/" for 127.0.0.1 at 2019-01-15 14:54:46 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (103.6ms)
+  Rendered layouts/administration/_sidebar.html.erb (3.8ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.8ms)
+Completed 200 OK in 958ms (Views: 903.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-15 14:54:50 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 194ms (Views: 188.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-15 14:54:50 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-15 14:54:56 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PZBHGkinfnhBrSu1ecaYPYJo0hUBAfDei55Vyq/I6mK9wtzVYYRixbPgzUgzGRONwzQ3fzdKMkeborW0wsuZbQ==", "user"=>{"email"=>"louis@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (2.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "louis@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmation_token", "confirmation_sent_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "louis@gmail.com"], ["encrypted_password", "$2a$11$tO69OjAuMgRC99ehRPry4.YoexfC2RrIid3mTTjE6eXrxgP4Zi0x2"], ["confirmation_token", "g44LThmycSKUnyxWdst7"], ["confirmation_sent_at", "2019-01-15 13:54:56.368243"], ["created_at", "2019-01-15 13:54:56.367663"], ["updated_at", "2019-01-15 13:54:56.367663"]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (26.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (4.2ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 66.6ms
+Completed 500 Internal Server Error in 269ms (ActiveRecord: 32.7ms)
+
+
+  
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>You can confirm your account email through the link below:</p>
+    4: 
+    5: <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+  
+app/views/devise/mailer/confirmation_instructions.html.erb:5:in `_app_views_devise_mailer_confirmation_instructions_html_erb__355700387718314995_70294424856600'
+Started GET "/" for 127.0.0.1 at 2019-01-15 14:57:53 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (54.5ms)
+  Rendered layouts/administration/_sidebar.html.erb (4.1ms)
+  Rendered layouts/shared/_flash_messages.html.erb (1.1ms)
+Completed 200 OK in 1012ms (Views: 952.9ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 15:03:26 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (45.9ms)
+  Rendered layouts/administration/_sidebar.html.erb (4.0ms)
+  Rendered layouts/shared/_flash_messages.html.erb (1.0ms)
+Completed 200 OK in 946ms (Views: 904.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2019-01-15 15:03:30 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 202ms (Views: 199.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2019-01-15 15:03:31 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 93ms (Views: 90.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins" for 127.0.0.1 at 2019-01-15 15:03:49 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dq9xhMl8c0g39lGydMXnpd316NvX6qbVw4+S02p89maO/epL4F9v9cW7t08+GmwVnKkNseGhZEzTs3KtB3+FaQ==", "admin"=>{"email"=>"salut@salut.salut", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdmin Exists (3.0ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "salut@salut.salut"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdmin Create (2.1ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "confirmation_token", "confirmation_sent_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "salut@salut.salut"], ["encrypted_password", "$2a$11$2IAUIqN3KWnXh/3E5JKa0uHcCXiDt/Hje60q.FZfJHg7QBft.sghi"], ["confirmation_token", "xBFcDSEbKbZKMKaZGMMm"], ["confirmation_sent_at", "2019-01-15 14:03:49.627711"], ["created_at", "2019-01-15 14:03:49.627109"], ["updated_at", "2019-01-15 14:03:49.627109"]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (5.0ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 71.6ms
+Completed 500 Internal Server Error in 250ms (ActiveRecord: 8.8ms)
+
+
+  
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>You can confirm your account email through the link below:</p>
+    4: 
+    5: <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+  
+app/views/devise/mailer/confirmation_instructions.html.erb:5:in `_app_views_devise_mailer_confirmation_instructions_html_erb__355700387718314995_70294476745960'
+Started GET "/" for 127.0.0.1 at 2019-01-15 15:11:58 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (3.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (47.7ms)
+  Rendered layouts/administration/_sidebar.html.erb (4.4ms)
+  Rendered layouts/shared/_flash_messages.html.erb (1.1ms)
+Completed 200 OK in 1072ms (Views: 1018.0ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2019-01-15 15:12:05 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 177ms (Views: 173.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2019-01-15 15:12:05 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 65ms (Views: 63.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins" for 127.0.0.1 at 2019-01-15 15:12:26 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kXEJ546TpFkX6go6kKwr4Id/ieorWXn1GTfTv7vMmiIRI5Iop7C45OWn7Mfac6BQxiNsgB0Su2wJCzPB1s/pLQ==", "admin"=>{"email"=>"lucien@lucien.lucien", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdmin Exists (3.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "lucien@lucien.lucien"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdmin Create (1.9ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "confirmation_token", "confirmation_sent_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "lucien@lucien.lucien"], ["encrypted_password", "$2a$11$kFdppcSwQVu.znfEHw9Hpuw2UUED7duUK2cJz6ppRp3sFOIc4eEw."], ["confirmation_token", "WsuWh81K2p_j7QXxymcv"], ["confirmation_sent_at", "2019-01-15 14:12:26.651961"], ["created_at", "2019-01-15 14:12:26.651446"], ["updated_at", "2019-01-15 14:12:26.651446"]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (30.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (5.1ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 69.5ms
+Completed 500 Internal Server Error in 275ms (ActiveRecord: 37.5ms)
+
+
+  
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>You can confirm your account email through the link below:</p>
+    4: 
+    5: <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+  
+app/views/devise/mailer/confirmation_instructions.html.erb:5:in `_app_views_devise_mailer_confirmation_instructions_html_erb__355700387718314995_70294476760200'
+Started POST "/admins" for 127.0.0.1 at 2019-01-15 15:14:57 +0100
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kXEJ546TpFkX6go6kKwr4Id/ieorWXn1GTfTv7vMmiIRI5Iop7C45OWn7Mfac6BQxiNsgB0Su2wJCzPB1s/pLQ==", "admin"=>{"email"=>"lucien@lucien.lucien", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdmin Exists (3.0ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "lucien@lucien.lucien"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (93.1ms)
+Completed 200 OK in 1759ms (Views: 899.4ms | ActiveRecord: 17.9ms)
+
+
+Started POST "/admins" for 127.0.0.1 at 2019-01-15 15:15:13 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+HRNGNrGUnw4WID7ZCajQOrMrwVtCiQ38yZkrGcmTy94JtbX8+VOwcoVZgYu+Sjwq5BKb1tB5q7jGoTSCiU8IA==", "admin"=>{"email"=>"lucien@lucien.l", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdmin Exists (2.9ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "lucien@lucien.l"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdmin Create (1.9ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "confirmation_token", "confirmation_sent_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "lucien@lucien.l"], ["encrypted_password", "$2a$11$J8iU9oal7tMR7gEfxxi1/O1NyS/hVH95k0Zh5.M74L6oYOYiXu7Li"], ["confirmation_token", "BqncyUHmJxytt-ETtwNg"], ["confirmation_sent_at", "2019-01-15 14:15:13.565858"], ["created_at", "2019-01-15 14:15:13.564477"], ["updated_at", "2019-01-15 14:15:13.564477"]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (1.5ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 159.2ms
+Sent mail to lucien@lucien.l (68.0ms)
+Date: Tue, 15 Jan 2019 15:15:14 +0100
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: lucien@lucien.l
+Message-ID: <5c3deaf249476_7df3fdf7c17617844951@netrestore-a8206613d6e1.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome lucien@lucien.l!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/admins/confirmation?confirmation_token=BqncyUHmJxytt-ETtwNg">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 966ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 15:15:14 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (119.0ms)
+  Rendered layouts/administration/_sidebar.html.erb (14.4ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.6ms)
+Completed 200 OK in 322ms (Views: 255.8ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 15:22:51 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (2.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (46.2ms)
+  Rendered layouts/administration/_sidebar.html.erb (5.6ms)
+  Rendered layouts/shared/_flash_messages.html.erb (1.3ms)
+Completed 200 OK in 1051ms (Views: 977.3ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-15 15:26:17 +0100
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (427.2ms)
+Completed 200 OK in 1408ms (Views: 1354.4ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-15 15:26:19 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 53ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-15 15:26:47 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GT3dNNAjak6FIdoOVk3yMdTympNR2isgWqfcNS2UWEuZb0b7+QB283dsPPMcknmBla5/+WeR6blKmzxLQJcrRA==", "user"=>{"email"=>"inscrismoi@stp.pls", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (5.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "inscrismoi@stp.pls"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmation_token", "confirmation_sent_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "inscrismoi@stp.pls"], ["encrypted_password", "$2a$11$7fjM7rpCzItOd296kxvqsuOsd0aFdICXV6VUCQAY5gazugj5kretK"], ["confirmation_token", "KLy9DUyBG-BemxxvdpmY"], ["confirmation_sent_at", "2019-01-15 14:26:48.168963"], ["created_at", "2019-01-15 14:26:48.168545"], ["updated_at", "2019-01-15 14:26:48.168545"]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (1.3ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 173.0ms
+Sent mail to inscrismoi@stp.pls (9.9ms)
+Date: Tue, 15 Jan 2019 15:26:48 +0100
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: inscrismoi@stp.pls
+Message-ID: <5c3deda8b5de4_8163fe9d49a4e2870644@netrestore-a8206613d6e1.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome inscrismoi@stp.pls!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:25/users/confirmation?confirmation_token=KLy9DUyBG-BemxxvdpmY">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 904ms (ActiveRecord: 13.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 15:26:48 +0100
+Processing by Administration::ItemsController#index as HTML
+  Rendering administration/items/index.html.erb within layouts/administration
+  [1m[36mItem Load (3.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/administration/items/index.html.erb:44
+  Rendered administration/items/index.html.erb within layouts/administration (90.8ms)
+  Rendered layouts/administration/_sidebar.html.erb (2.2ms)
+  Rendered layouts/shared/_flash_messages.html.erb (0.9ms)
+Completed 200 OK in 257ms (Views: 183.1ms | ActiveRecord: 21.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-15 15:35:37 +0100
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (459.8ms)
+Completed 200 OK in 1426ms (Views: 1377.4ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-15 15:35:39 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 82ms (Views: 79.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-15 15:35:58 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eVjmzuTzBZTV0bsxuUcwLLwIPcqAMjaWh00gL0wTCMD5Cn0BzdAZKSecXczzmLuc/VTYoLZ59A+XccBRIRB7zw==", "user"=>{"email"=>"wesh@wesh.wesh", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (3.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wesh@wesh.wesh"], ["LIMIT", 1]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmation_token", "confirmation_sent_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "wesh@wesh.wesh"], ["encrypted_password", "$2a$11$98L95m/2UWXOuoYPUcQdd.cgFgV9YcVomsD67Yinj.jHxBfiJ/RaS"], ["confirmation_token", "fG9DET7RfSy9YK315_FS"], ["confirmation_sent_at", "2019-01-15 14:35:58.666529"], ["created_at", "2019-01-15 14:35:58.666237"], ["updated_at", "2019-01-15 14:35:58.666237"]]
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (27.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/reaualexis/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (1.8ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 160.1ms
+Sent mail to wesh@wesh.wesh (60013.0ms)
+Date: Tue, 15 Jan 2019 15:35:59 +0100
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: wesh@wesh.wesh
+Message-ID: <5c3defcf4db03_83b3fc314d05f048757f@netrestore-a8206613d6e1.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome wesh@wesh.wesh!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:1081/users/confirmation?confirmation_token=fG9DET7RfSy9YK315_FS">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 61140ms (ActiveRecord: 36.0ms)
+
+
