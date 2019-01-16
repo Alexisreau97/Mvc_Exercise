@@ -286,6 +286,7 @@ DEPENDENCIES
   pry-byebug (~> 3.6)
   puma (~> 3.11)
   rails (~> 5.2.1, >= 5.2.1.1)
+  redis (~> 4.1)
   rspec-rails (~> 3.7, >= 3.7.2)
   rubocop (~> 0.60.0)
   rubocop-rspec (~> 1.30, >= 1.30.1)
